@@ -6,7 +6,7 @@ import { GifRead } from './Components/GifRead';
 const GifExpertApp = () => {
 
   // const categorias = ["One Punch", "picachu", "Goku"]
-  const [categorias, setCategorias] = useState(["One Punch"]);
+  const [categorias, setCategorias] = useState(["simpsons"]);
 
   return (
     <Fragment>
