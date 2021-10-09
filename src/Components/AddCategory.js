@@ -32,6 +32,7 @@ export const AddCategory = ( { setCategorias, categorias = [] }) => {
   )
 }
 
+
 AddCategory.propTypes = {
   setCategorias: PropTypes.func.isRequired,
   categorias: PropTypes.array.isRequired    
