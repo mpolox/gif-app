@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Fragment } from 'react/cjs/react.production.min';
 import { AddCategory } from './Components/AddCategory';
-import { GifRead } from './Components/GifRead';
+import { GifGrid } from './Components/GifGrid';
 
 const GifExpertApp = () => {
 
@@ -17,7 +17,7 @@ const GifExpertApp = () => {
         {
           categorias.map ( categoria => {
             return (
-              <GifRead 
+              <GifGrid
                 key={categoria} 
                 categoria={categoria}/>
             )              

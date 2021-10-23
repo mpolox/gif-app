@@ -15,7 +15,7 @@ export const AddCategory = ( { setCategorias, categorias = [] }) => {
     const encontrado = categorias.find(item => item === inputValue);
 
     if (inputValue.trim().length > 2 && !encontrado) {
-      setCategorias( [...categorias,inputValue]);
+      setCategorias( [inputValue,...categorias]);
     }
     setInputValue("");
     console.log("input:", inputValue);

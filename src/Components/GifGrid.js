@@ -1,22 +1,22 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import { getGifs } from '../Helpers/getGifs';
+import React, { Fragment } from 'react'
+import { useFetchGifs } from '../hooks/useFetchGifs';
 import { GifGridItem } from './GifGridItem';
 //  
 
-export const GifRead = ( {categoria} ) => {
+export const GifGrid = ( {categoria} ) => {
 
-  const [images, setImages] = useState([]);
-
-  useEffect( () => {
-    getGifs(categoria).then(setImages)
-  }, [categoria]);
+  // const [images, setImages] = useState([]);
+  const {data, loading} = useFetchGifs(categoria);
 
   return (
     <Fragment>
     <h3> {categoria} </h3>
+
+    { loading && "Cargando..."}
+
       <div className="card-grid">
         {
-          images.map( img => (
+          data.map( img => (
             <GifGridItem 
               key={img.id} 
               {...img}
