@@ -11,7 +11,7 @@ const GifExpertApp = () => {
   return (
     <Fragment>
       <h1>Gif App</h1>
-      <AddCategory setCategorias={setCategorias} categorias= {categorias}/>
+      <AddCategory setCategorias={setCategorias} categorias={categorias}/>
       <hr/>
       <ol>
         {
